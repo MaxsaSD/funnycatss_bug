@@ -7,18 +7,18 @@ function sendForm(e){
     }
     e.preventDefault();
     $.ajax({
-    url: "https://formspree.io/bravo-soft@ukr.net", 
+    url: "https://formspree.io/134oriflame@gmail.com", 
     method: "POST",
     data: {
-        client_name:$('#name').val(),
-        client_phone:$('#email').val(),
-        client_email:$('#comment').val()
+        name:$('#name').val(),
+        email:$('#email').val(),
+        comments:$('#comments').val()
     },
     dataType: "json"
 })
 .done(function(){
     $('#mySuperForm')[0].reset();
-    $('#msg').html('Дякуємо за реєстрацію!')
+    $('#msg').html('Дякуємо!')
 })
 .fail(function(){
     $('#msg').html('Реєстрація пройшла з помилками!')
